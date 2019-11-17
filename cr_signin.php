@@ -74,6 +74,7 @@
                         <div class="text-right">
                             <input type="submit" name="signin" value="SIGN IN" class="btn btn-primary">
                         </div>
+                        <a class="btn pull-right" href="forget_password.php?user=student">Forget Password</a>
                         <br>
                     </div>                    
                 </div>

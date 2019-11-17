@@ -60,7 +60,7 @@
                     <br>
                     <div class="panel-body">
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Emal: </label>
+                            <label class="col-sm-2 control-label">Email: </label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" name="email" value="<?php if(isset($_POST['email'])){echo $_POST['email'];}?>">
                             </div>
@@ -74,10 +74,12 @@
                         <div class="text-right">
                             <input type="submit" name="signin" value="SIGN IN" class="btn btn-primary">
                         </div>
+                        <a class="btn pull-right" href="forget_password.php?user=faculty">Forget Password</a>
                         <br>
                     </div>                    
                 </div>
             </form>
+            
               <br>
                <br>
                <br>
