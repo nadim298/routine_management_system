@@ -17,6 +17,9 @@
         else if($user=="student"){
           $update_sql="UPDATE `batches` SET `password` = '$new_password' WHERE `batches`.`cr_email` = '$email'";
         }
+        else if($user=="admin"){
+          $update_sql="UPDATE `admin` SET `password` = '$new_password' WHERE `admin`.`email` = '$email'";
+        }
             
             if(mysqli_query($conn,$update_sql)){
                 echo '<script language="javascript">';

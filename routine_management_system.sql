@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 17, 2019 at 12:46 PM
+-- Generation Time: Nov 25, 2019 at 08:01 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.19
 
@@ -31,6 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
   `username` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -38,8 +39,8 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(1, 'admin', '4d813d28f0aaaa4e9da0fb6e55293607');
+INSERT INTO `admin` (`id`, `username`, `email`, `password`) VALUES
+(1, 'admin', '404nadim@gmail.com', '4d813d28f0aaaa4e9da0fb6e55293607');
 
 -- --------------------------------------------------------
 
@@ -104,7 +105,7 @@ CREATE TABLE `email_verification` (
 --
 
 INSERT INTO `email_verification` (`email`, `otp`, `created_on`) VALUES
-('404nadim@gmail.com', '2175', '2019-11-17 13:48:46'),
+('404nadim@gmail.com', '7821', '2019-11-17 13:48:46'),
 ('nadimboss29@gmail.com', '3476', '2019-11-17 15:34:59');
 
 -- --------------------------------------------------------
@@ -255,7 +256,8 @@ CREATE TABLE `trimester` (
 INSERT INTO `trimester` (`id`, `session`, `start_date`, `end_date`, `status`) VALUES
 (40, 'Summer 2019', '2019-09-03', '2019-09-05', 0),
 (41, 'Spring 2019', '2019-11-17', '2019-11-20', 0),
-(42, 'Summer 2019', '2019-11-17', '2019-11-21', 1);
+(42, 'Summer 2019', '2019-11-17', '2019-11-21', 0),
+(43, 'Spring 2019', '2019-11-24', '2019-11-28', 1);
 
 --
 -- Indexes for dumped tables
@@ -377,7 +379,7 @@ ALTER TABLE `routine`
 -- AUTO_INCREMENT for table `trimester`
 --
 ALTER TABLE `trimester`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

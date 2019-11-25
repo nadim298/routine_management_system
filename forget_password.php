@@ -23,6 +23,9 @@ if($user=="faculty"){
 else if ($user=="student") {
   $search_on_user_table = "SELECT * from batches WHERE cr_email='$email' ";
 }
+else if ($user=="admin") {
+  $search_on_user_table = "SELECT * from admin WHERE email='$email' ";
+}
 
 
 $search_on_user_table_run=mysqli_query($conn,$search_on_user_table);
